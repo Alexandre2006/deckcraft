@@ -78,11 +78,12 @@ const Content: VFC<{ serverAPI: ServerAPI }> = ({serverAPI}) => {
   );
 };
 
+// Runs game with id 400 on click
 const DeckyPluginRouterTest: VFC = () => {
   return (
     <div style={{ marginTop: "50px", color: "white" }}>
       Hello World!
-      <DialogButton onClick={() => Router.NavigateToLibraryTab()}>
+      <DialogButton onClick={() => {SteamClient.Apps.RunGame("400", "", -1, 100)}}>
         Go to Library
       </DialogButton>
     </div>
